@@ -1194,311 +1194,143 @@
                                 <div class="rts-funfact-wrapper d-flex flex-wrap justify-content-center text-center">
                                     <p style="color: white;">With decades of experience in luxurious Tri Valley real estate, our team is here to ensure that your dreams are a reality. Let us guide you through your home buying journey, contact us today!</p>
                                 </div>
-                                <!-- Button to open the modal -->
-<div style="text-align: center; margin-top: 20px;">
-    <a href="javascript:void(0);" 
-       onclick="openModal()" 
-       style="
-            display: inline-block;
-            font-size: 12px;
-            color: white;
-            background-color: #dc3545;
-            padding: 10px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-       "
-       onmouseover="this.style.backgroundColor='#c82333'; this.style.transform='scale(1.05)';" 
-       onmouseout="this.style.backgroundColor='#dc3545'; this.style.transform='scale(1)';">
-       Contact Us
-    </a>
-</div>
-
-<!-- Modal structure -->
- 
-<div id="appointmentModal" class="modal">
-    <div style="margin-top: 50px;" class="modal-container">
-        <!-- Left Side Contact Information -->
-        <div class="modal-left">
-            <p style="color: white; font-size: 14px;"> (925) 553-6707 <br>  luxuryhomesinwc@icloud.com</p>
-            <p style="color: white;font-size: 14px;">
-                 4337 Chabot Drive, Pleasanton, CA 94588<br>
-                Julie Hansen-Orvis | CA DRE# 00934447
-            </p>
-        </div>
-
-        <!-- Right Side Form -->
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Submit A Message</h2>
-            <form>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <label style="font-size: 12px; color: gray; text-align: left; display: block; margin-top: 10px;">
-                    <input type="checkbox" required style="margin-right: 5px;">
-                    By providing Julie Hansen Partnership your contact information, you acknowledge and agree to our <a href="#" style="color: #000; text-decoration: underline;">Privacy Policy</a> and consent to receiving marketing communications, including through automated calls, texts, and emails, some of which may use artificial or prerecorded voices. This consent isn’t necessary for purchasing any products or services and you may opt out at any time. To opt out from texts, you can reply, “stop” at any time. To opt out from emails, you can click on the unsubscribe link in the emails. Message and data rates may apply.
-                </label>
-
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </div>
-</div>
-
+                                <div style="text-align: center; margin-top: 20px;">
+                                    <a href="javascript:void(0);" onclick="openModal()" style="display: inline-block; font-size: 12px; color: white; background-color: #dc3545; padding: 10px 30px; border-radius: 8px; text-decoration: none; transition: background-color 0.3s ease, transform 0.2s ease; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);" onmouseover="this.style.backgroundColor='#c82333'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='#dc3545'; this.style.transform='scale(1)';">Contact Us</a>
+                                </div>
+                                <div id="appointmentModal" class="modal">
+                                    <div class="modal-container">
+                                        <div class="modal-left">
+                                            <p style="color: white; font-size: 14px; margin-bottom: 10px;">(925) 553-6707 <br> luxuryhomesinwc@icloud.com</p>
+                                            <p style="color: white;font-size: 14px;">4337 Chabot Drive, Pleasanton, CA 94588<br>Julie Hansen-Orvis | CA DRE# 00934447</p>
+                                        </div>
+                                        <div class="modal-content">
+                                            <span class="close" onclick="closeModal()">&times;</span>
+                                            <h2>Submit A Message</h2>
+                                            <form>
+                                                <label for="name">Name</label>
+                                                <input type="text" id="name" name="name" required>
+                                                <label for="phone">Phone</label>
+                                                <input type="tel" id="phone" name="phone" required>
+                                                <label for="email">Email</label>
+                                                <input type="email" id="email" name="email" required>
+                                                <label for="message">Message</label>
+                                                <textarea id="message" name="message" required></textarea>
+                                                <label style="font-size: 12px; color: gray; text-align: left; display: block; margin-top: 10px;">
+                                                    <input type="checkbox" required style="margin-right: 5px;">
+                                                    By providing Julie Hansen Partnership your contact information, you acknowledge and agree to our <a href="#" style="color: #000; text-decoration: underline;">Privacy Policy</a> and consent to receiving marketing communications.
+                                                </label>
+                                                <button type="submit">Send</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        <style>
-         /* Modal Background */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 2147483647 !important; 
-    left: 0;
-    top: 50px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-}
-
-/* Modal Container */
-.modal-container {
-    display: flex;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    color: black;
-    font-family: Arial, sans-serif;
-    max-height: 90vh; /* Limits height for smaller screens */
-    overflow-y: auto; /* Enables scrolling within the modal */
-}
-
-/* Left Contact Information Panel */
-.modal-left {
-    flex: 1;
-    background-color: #2c3e50; /* Darker background for a professional look */
-    padding: 30px 20px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 15px; /* Adds space between elements */
-    font-family: 'Arial', sans-serif;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle inner shadow */
-}
-
-.modal-left p {
-    font-size: 18px;
-    margin: 0;
-    line-height: 1.6;
-    color: #ecf0f1; /* Softer white */
-}
-
-.modal-left p:nth-child(1),
-.modal-left p:nth-child(2) {
-    font-weight: bold;
-    font-size: 20px; /* Slightly larger for emphasis */
-}
-
-.modal-left p:nth-child(3) {
-    font-size: 16px;
-    color: #bdc3c7; /* Lighter color for less emphasis */
-}
-
-/* Add a border line between elements for structure */
-.modal-left p:not(:last-child) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Thin white border */
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-
-/* Right Form Content */
-.modal-content {
-    flex: 2;
-    background-color: white;
-    padding: 40px 20px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    position: relative;
-    color: black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    overflow-y: auto; /* Enables scrolling within modal content */
-    max-height: 90vh; /* Limit the height so it doesn’t overflow screen */
-}
-
-.modal-content h2 {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #000;
-}
-
-/* Close Button */
-.close {
-    color: black;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    cursor: pointer;
-}
-
-/* Form Elements */
-.modal-content label {
-    display: block;
-    margin-top: 15px;
-    font-size: 14px;
-    color: #333;
-}
-
-.modal-content input[type="text"],
-.modal-content input[type="tel"],
-.modal-content input[type="email"],
-.modal-content textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: 14px;
-}
-
-/* Textarea Styling */
-.modal-content textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-/* Consent Text */
-.modal-content label[style*="font-size: 12px;"] {
-    font-size: 12px;
-    color: #666;
-    margin-top: 10px;
-    display: block;
-    text-align: justify;
-    line-height: 1.5;
-}
-
-/* Submit Button */
-.modal-content button {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px;
-    width: 100%;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.modal-content button:hover {
-    background-color: #333;
-}
-
-/* Link Styling */
-.modal-content a {
-    color: #000;
-    text-decoration: underline;
-}
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .modal-container {
-        flex-direction: column;
-    }
-
-    .modal-left {
-        order: 2; /* Move the left panel below the form content */
-        border-radius: 0 0 8px 8px; /* Round corners only at the bottom */
-        padding: 20px;
-    }
-
-    .modal-content {
-        order: 1; /* Ensure the form content is displayed first */
-        border-radius: 8px 8px 0 0; /* Round corners only at the top */
-        padding: 20px;
-    }
-}
-
-
-          h2 {
-    position: relative;
-    overflow: hidden; /* Ensures the underline is hidden initially */
-}
-
-.underline {
-    display: block;
-    width: 100%; /* Set to full width */
-    height: 2px; /* Adjust the height as needed */
-    background: white; /* Color of the underline */
-    position: absolute;
-    bottom: -5px; /* Positioning below the text */
-    left: 50%; /* Center it */
-    transform: translateX(-50%); /* Offset to center */
-    animation: underline-animation 0.5s forwards; /* Trigger animation */
-    animation-delay: 0.5s; /* Delay before the underline appears */
-}
-
-@keyframes underline-animation {
-    from {
-        width: 0; /* Start with no width */
-    }
-    to {
-        width: 100%; /* Expand to full width */
-    }
-}
-
-
-        </style>
-        <script>
-  function openModal() {
-    document.getElementById("appointmentModal").style.display = "block";
-    document.getElementById("header-container").classList.add("hidden");
-    document.body.style.overflow = "hidden"; // Disable background scroll
-}
-
-function closeModal() {
-    document.getElementById("appointmentModal").style.display = "none";
-    document.getElementById("header-container").classList.remove("hidden");
-    document.body.style.overflow = ""; // Re-enable background scroll
-}
-
-// Close the modal if the user clicks outside of it
-window.onclick = function(event) {
-    const modal = document.getElementById("appointmentModal");
-    if (event.target === modal) {
-        closeModal();
-    }
-}
-
-        </script>
-
         </section>
+        
+        <style>
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2147483647;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .modal-container {
+            display: flex;
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .modal-left {
+            flex: 1;
+            background-color: #2c3e50;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        
+        .modal-content {
+            flex: 2;
+            background-color: white;
+            padding: 20px;
+            color: black;
+            text-align: left;
+            position: relative;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+        
+        .close {
+            color: black;
+            font-size: 28px;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            cursor: pointer;
+        }
+        
+        .modal-content label, .modal-content button {
+            font-size: 16px;
+        }
+        
+        .modal-content input, .modal-content textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .modal-container {
+                flex-direction: column;
+                max-width: 95%;
+                margin-top: 50px;
+            }
+            .modal-left, .modal-content {
+                width: 100%;
+            }
+        }
+        </style>
+        
+        <script>
+        function openModal() {
+            document.getElementById("appointmentModal").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+        
+        function closeModal() {
+            document.getElementById("appointmentModal").style.display = "none";
+            document.body.style.overflow = "";
+        }
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById("appointmentModal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+        </script>
+        
         
         
 
