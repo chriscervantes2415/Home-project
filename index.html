@@ -1219,7 +1219,9 @@
                                                     <input type="checkbox" required style="margin-right: 5px;">
                                                     By providing Julie Hansen Partnership your contact information, you acknowledge and agree to our <a href="#" style="color: #000; text-decoration: underline;">Privacy Policy</a> and consent to receiving marketing communications.
                                                 </label>
-                                                <button type="submit">Send</button>
+                                                <div style="text-align: center; margin-top: 20px;">
+                                                    <button type="submit">Send</button>
+                                                </div>
                                             </form>
                                         </div>
                                     </div>
@@ -1233,6 +1235,20 @@
         
         <style>
             /* Modal styling */
+            .modal-content button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #c82333; /* Darker shade on hover */
+}
+
             .modal {
                 display: none;
                 position: fixed;
